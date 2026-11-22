@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -10,8 +10,8 @@
 body {
     background: #090711;
     color: #fff;
-    font-family: 'Vazirmatn', Tahoma, sans-serif;
-    direction: rtl;
+    font-family: 'Poppins', Tahoma, sans-serif;
+    direction: ltr;
     overflow-x: hidden;
 }
 
@@ -120,7 +120,7 @@ body::after {
 .hero-content h1 {
     font-size: clamp(35px, 5vw, 58px);
     font-weight: 900;
-    line-height: 1.8;
+    line-height: 1.4;
     margin-bottom: 20px;
 }
 
@@ -142,7 +142,7 @@ body::after {
 .hero-content p {
     color: #aaa4ba;
     font-size: 16px;
-    line-height: 2.4;
+    line-height: 1.9;
     max-width: 520px;
     margin-bottom: 35px;
 }
@@ -454,7 +454,7 @@ body::after {
 .project-info p {
     color: #aaa4ba;
     font-size: 13px;
-    line-height: 2;
+    line-height: 1.8;
     min-height: 55px;
 }
 
@@ -483,7 +483,7 @@ body::after {
 
 .project-info a:hover {
     color: white;
-    transform: translateX(-5px);
+    transform: translateX(5px);
 }
 
 @media (max-width: 900px) {
@@ -527,7 +527,7 @@ body::after {
     gap: 25px;
     margin-bottom: 30px;
 }
-
+
 
 .copyright {
     color: #777184;
