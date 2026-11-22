@@ -527,17 +527,7 @@ body::after {
     gap: 25px;
     margin-bottom: 30px;
 }
-
-.footer-social a {
-    color: #c084fc;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.footer-social a:hover {
-    transform: translateY(-5px);
-    color: white;
-}
+
 
 .copyright {
     color: #777184;
