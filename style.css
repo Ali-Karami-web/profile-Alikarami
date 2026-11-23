@@ -34,8 +34,9 @@ a {
   color: inherit;
 }
 
-button {
-  font: inherit;
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .container {
@@ -43,38 +44,9 @@ button {
   margin: auto;
 }
 
-section {
-  position: relative;
-}
-
 ::selection {
   background: var(--primary);
   color: white;
-}
-
-/* BACKGROUND */
-
-.background-glow {
-  position: fixed;
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  filter: blur(130px);
-  opacity: 0.12;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.glow-one {
-  background: #236aff;
-  top: 10%;
-  left: -150px;
-}
-
-.glow-two {
-  background: #713cff;
-  right: -150px;
-  top: 55%;
 }
 
 /* =========================
@@ -85,12 +57,12 @@ section {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(8,12,23,0.85);
+  background: rgba(8,12,23,0.9);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border);
 }
 
-.nav-container {
+.navbar {
   min-height: 78px;
   display: flex;
   align-items: center;
@@ -113,48 +85,32 @@ section {
   gap: 32px;
 }
 
-.nav-link {
+.nav a {
   font-size: 13px;
   color: var(--muted);
   transition: 0.3s;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav a:hover {
   color: var(--primary-light);
 }
 
-.nav-button {
+.nav-contact {
+  padding: 10px 19px;
   border: 1px solid rgba(84,140,255,0.4);
-  padding: 10px 20px;
   border-radius: 9px;
-  font-size: 13px;
+  font-size: 12px;
   transition: 0.3s;
 }
 
-.nav-button:hover {
+.nav-contact:hover {
   background: var(--primary);
   border-color: var(--primary);
 }
 
-.nav-button span {
-  margin-left: 5px;
-}
-
-.menu-toggle {
+#menu-toggle,
+.menu-icon {
   display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  width: 30px;
-}
-
-.menu-toggle span {
-  display: block;
-  height: 2px;
-  background: white;
-  margin: 6px 0;
-  transition: 0.3s;
 }
 
 /* =========================
@@ -162,7 +118,7 @@ section {
 ========================= */
 
 .hero {
-  min-height: 650px;
+  min-height: 660px;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
@@ -181,10 +137,10 @@ section {
   border-radius: 50px;
   font-size: 11px;
   color: var(--primary-light);
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
-.status-dot {
+.availability span {
   width: 8px;
   height: 8px;
   background: #4ade80;
@@ -192,7 +148,7 @@ section {
   box-shadow: 0 0 12px #4ade80;
 }
 
-.hero-subtitle {
+.eyebrow {
   color: var(--primary-light);
   letter-spacing: 4px;
   font-size: 12px;
@@ -230,7 +186,6 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
   padding: 13px 22px;
   border-radius: 9px;
   font-size: 13px;
@@ -260,25 +215,25 @@ section {
   color: var(--primary-light);
 }
 
-.hero-socials {
+.social-links {
   display: flex;
   gap: 25px;
   margin-top: 35px;
 }
 
-.hero-socials a {
+.social-links a {
   color: var(--muted);
   font-size: 12px;
   transition: 0.3s;
 }
 
-.hero-socials a:hover {
+.social-links a:hover {
   color: var(--primary-light);
 }
 
 /* HERO IMAGE */
 
-.hero-visual {
+.hero-image {
   position: relative;
   display: flex;
   justify-content: center;
@@ -286,7 +241,7 @@ section {
   min-height: 440px;
 }
 
-.profile-glow {
+.image-glow {
   position: absolute;
   width: 300px;
   height: 300px;
@@ -295,12 +250,12 @@ section {
   opacity: 0.2;
 }
 
-.profile-card {
+.image-box {
+  position: relative;
   width: 300px;
   height: 370px;
-  position: relative;
-  border-radius: 30px;
   padding: 9px;
+  border-radius: 30px;
   border: 1px solid rgba(84,140,255,0.4);
   background: linear-gradient(145deg, #1b3155, #101727);
   transform: rotate(3deg);
@@ -308,11 +263,11 @@ section {
   box-shadow: 0 25px 70px rgba(0,0,0,0.4);
 }
 
-.profile-card:hover {
+.image-box:hover {
   transform: rotate(0deg) translateY(-8px);
 }
 
-.profile-card img {
+.image-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -330,19 +285,21 @@ section {
   border-radius: 13px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.3);
   z-index: 2;
+  animation: floating 4s ease-in-out infinite;
 }
 
-.card-top {
+.card-one {
   top: 65px;
   left: -10px;
 }
 
-.card-bottom {
+.card-two {
   bottom: 65px;
   right: -15px;
+  animation-delay: 1s;
 }
 
-.floating-icon {
+.floating-card > span {
   color: var(--primary-light);
   font-size: 23px;
 }
@@ -361,8 +318,18 @@ section {
   font-size: 9px;
 }
 
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 /* =========================
-   SECTION GLOBAL
+   SECTION HEADING
 ========================= */
 
 .section {
@@ -404,7 +371,6 @@ section {
 ========================= */
 
 .about-card {
-  position: relative;
   display: grid;
   grid-template-columns: 100px 1fr;
   gap: 30px;
@@ -438,10 +404,6 @@ section {
   font-size: 13px;
   margin-top: 10px;
   font-weight: 600;
-}
-
-.text-link span {
-  margin-left: 7px;
 }
 
 /* =========================
@@ -738,32 +700,55 @@ section {
 }
 
 /* =========================
-   ANIMATIONS
+   REVEAL ANIMATION
 ========================= */
 
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
+.hero-content,
+.hero-image,
+.section-heading,
+.about-card,
+.skill-card,
+.project-card,
+.contact-card {
+  animation: reveal 0.8s ease both;
+}
+
+.skill-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.skill-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.skill-card:nth-child(4) {
+  animation-delay: 0.3s;
 }
 
 /* =========================
-   RESPONSIVE
+   MOBILE MENU & RESPONSIVE
 ========================= */
 
 @media (max-width: 900px) {
 
   .hero {
-    grid-template-columns: 1fr 0.8fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 20px;
   }
 
-  .profile-card {
+  .image-box {
     width: 250px;
     height: 320px;
   }
@@ -772,27 +757,40 @@ section {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .card-top {
+  .card-one {
     left: -20px;
   }
 
-  .card-bottom {
+  .card-two {
     right: -10px;
   }
+
 }
 
 @media (max-width: 650px) {
 
-  .nav-container {
+  .navbar {
     min-height: 70px;
   }
 
-  .nav-button {
+  .nav-contact {
     display: none;
   }
 
-  .menu-toggle {
+  .menu-icon {
     display: block;
+    cursor: pointer;
+    width: 30px;
+    z-index: 102;
+  }
+
+  .menu-icon span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: white;
+    margin: 6px 0;
+    transition: 0.3s;
   }
 
   .nav {
@@ -800,43 +798,49 @@ section {
     top: 70px;
     left: 0;
     right: 0;
-    background: #101727;
-    border-bottom: 1px solid var(--border);
+
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
+
+    background: #101727;
+    border-bottom: 1px solid var(--border);
     padding: 10px 5%;
+
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition: 0.3s;
   }
 
-  .nav.open {
+  #menu-toggle:checked ~ .nav {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
 
-  .nav-link {
+  #menu-toggle:checked + .menu-icon span:first-child {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked + .menu-icon span:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav a {
     padding: 13px 5px;
     border-bottom: 1px solid var(--border);
   }
 
   .hero {
     grid-template-columns: 1fr;
-    padding-top: 70px;
+    padding-top: 65px;
     text-align: center;
-  }
-
-  .hero-content {
-    order: 1;
-  }
-
-  .hero-visual {
-    order: 2;
-    min-height: 400px;
   }
 
   .hero-description {
@@ -845,7 +849,7 @@ section {
   }
 
   .hero-buttons,
-  .hero-socials {
+  .social-links {
     justify-content: center;
   }
 
@@ -854,16 +858,20 @@ section {
     letter-spacing: -2px;
   }
 
-  .profile-card {
+  .hero-image {
+    min-height: 400px;
+  }
+
+  .image-box {
     width: 250px;
     height: 310px;
   }
 
-  .card-top {
+  .card-one {
     left: 0;
   }
 
-  .card-bottom {
+  .card-two {
     right: 0;
   }
 
@@ -916,4 +924,19 @@ section {
     padding: 22px;
   }
 
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
