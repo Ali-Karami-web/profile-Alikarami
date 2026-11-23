@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Ali Karami - Frontend Developer specializing in HTML, CSS, JavaScript and learning React.">
+  <meta name="description" content="Ali Karami - Frontend Developer portfolio. HTML, CSS, JavaScript and React.">
 
   <title>Ali Karami | Frontend Developer</title>
 
@@ -18,29 +18,30 @@
 
 <body>
 
-  <div class="background-glow glow-one"></div>
-  <div class="background-glow glow-two"></div>
+  <!-- HEADER -->
 
   <header class="header">
-    <div class="container nav-container">
+    <div class="container navbar">
 
-      <a href="#" class="logo">Ali<span>.</span></a>
+      <a href="#home" class="logo">Ali<span>.</span></a>
 
-      <nav class="nav" id="nav">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
+      <input type="checkbox" id="menu-toggle">
+
+      <label for="menu-toggle" class="menu-icon" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </nav>
 
-      <a href="#contact" class="nav-button">Let's Talk <span>↗</span></a>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <a href="#contact" class="nav-contact">Let's Talk ↗</a>
 
     </div>
   </header>
@@ -51,14 +52,14 @@
 
     <section class="hero container" id="home">
 
-      <div class="hero-content reveal">
+      <div class="hero-content">
 
         <div class="availability">
-          <span class="status-dot"></span>
+          <span></span>
           Open to suitable opportunities
         </div>
 
-        <p class="hero-subtitle">HELLO, I'M</p>
+        <p class="eyebrow">HELLO, I'M</p>
 
         <h1>
           Ali Karami
@@ -67,14 +68,16 @@
         </h1>
 
         <p class="hero-description">
-          I build modern, responsive and interactive web applications
-          using HTML, CSS and JavaScript. Currently learning React
-          and improving my development skills through real projects.
+          I'm a Frontend Developer passionate about building
+          modern, responsive and interactive web applications
+          using HTML, CSS and JavaScript.
+          Currently learning React and improving my skills
+          through practical projects.
         </p>
 
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">
-            Explore My Work <span>↗</span>
+            View My Projects ↗
           </a>
 
           <a href="#contact" class="btn btn-outline">
@@ -82,32 +85,34 @@
           </a>
         </div>
 
-        <div class="hero-socials">
-          <!-- Replace # with your real profile URLs -->
-          <a href="https://github.com/ali-karami-web" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <div class="social-links">
+          <a href="https://github.com/ali-karami-web"
+             target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+
+          <a href="https://www.linkedin.com/"
+             target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
         </div>
 
       </div>
 
-      <div class="hero-visual reveal">
+      <div class="hero-image">
 
-        <div class="profile-glow"></div>
+        <div class="image-glow"></div>
 
-        <div class="profile-card">
+        <div class="image-box">
           <img src="./IMG_20261009_151917.jpg" alt="Ali Karami">
         </div>
 
-        <div class="floating-card card-top">
-          <span class="floating-icon">⌘</span>
+        <div class="floating-card card-one">
+          <span>⌘</span>
           <div>
             <strong>Frontend</strong>
             <small>Development</small>
           </div>
         </div>
 
-        <div class="floating-card card-bottom">
-          <span class="floating-icon">✦</span>
+        <div class="floating-card card-two">
+          <span>✦</span>
           <div>
             <strong>Always Learning</strong>
             <small>Growing every day</small>
@@ -122,13 +127,13 @@
 
     <section class="section container" id="about">
 
-      <div class="section-heading reveal">
+      <div class="section-heading">
         <span class="section-label">GET TO KNOW ME</span>
         <h2>About <span>Me</span></h2>
         <p>A little introduction about who I am and what I do.</p>
       </div>
 
-      <div class="about-card reveal">
+      <div class="about-card">
 
         <div class="about-number">01</div>
 
@@ -136,24 +141,25 @@
           <h3>Building experiences through code.</h3>
 
           <p>
-            I'm Ali Karami, a Frontend Developer passionate about
-            creating clean, responsive and user-friendly websites.
+            I'm Ali Karami, a Frontend Developer passionate
+            about creating clean, responsive and user-friendly
+            websites.
           </p>
 
           <p>
-            I have worked on practical projects using JavaScript,
-            REST APIs and Local Storage. I enjoy solving problems,
-            learning new technologies and improving my coding skills.
+            I have experience building practical projects using
+            JavaScript, REST APIs and Local Storage.
+            I enjoy solving problems and learning new technologies.
           </p>
 
           <p>
-            Currently, I'm learning React and looking for opportunities
-            to collaborate with development teams and gain experience
-            through real-world projects.
+            Currently, I'm learning React and looking for
+            opportunities to collaborate with development teams
+            and grow professionally.
           </p>
 
           <a href="#contact" class="text-link">
-            Let's work together <span>↗</span>
+            Let's work together ↗
           </a>
         </div>
 
@@ -165,36 +171,36 @@
 
     <section class="section container" id="skills">
 
-      <div class="section-heading reveal">
+      <div class="section-heading">
         <span class="section-label">MY EXPERTISE</span>
         <h2>Technical <span>Skills</span></h2>
-        <p>Technologies and tools I use to build web applications.</p>
+        <p>Technologies I use to build web applications.</p>
       </div>
 
       <div class="skills-grid">
 
-        <div class="skill-card reveal">
+        <div class="skill-card">
           <div class="skill-icon html-icon">5</div>
           <h3>HTML5</h3>
           <p>Semantic markup and web structure.</p>
           <span class="skill-level">Comfortable</span>
         </div>
 
-        <div class="skill-card reveal">
+        <div class="skill-card">
           <div class="skill-icon css-icon">3</div>
           <h3>CSS3</h3>
           <p>Responsive layouts and modern styling.</p>
           <span class="skill-level">Comfortable</span>
         </div>
 
-        <div class="skill-card reveal">
+        <div class="skill-card">
           <div class="skill-icon js-icon">JS</div>
           <h3>JavaScript</h3>
           <p>Interactive applications and API integration.</p>
           <span class="skill-level">Intermediate</span>
         </div>
 
-        <div class="skill-card reveal">
+        <div class="skill-card">
           <div class="skill-icon react-icon">⚛</div>
           <h3>React</h3>
           <p>Learning component-based development.</p>
@@ -203,7 +209,7 @@
 
       </div>
 
-      <div class="additional-skills reveal">
+      <div class="additional-skills">
         <span>REST API</span>
         <span>Local Storage</span>
         <span>Git</span>
@@ -217,22 +223,22 @@
 
     <section class="section container" id="projects">
 
-      <div class="section-heading reveal">
+      <div class="section-heading">
         <span class="section-label">MY RECENT WORK</span>
         <h2>Featured <span>Projects</span></h2>
-        <p>A selection of projects I've built using web technologies.</p>
+        <p>Some of the projects I've designed and developed.</p>
       </div>
 
       <div class="projects-grid">
 
-        <!-- PROJECT 1 -->
+        <!-- ONLINE STORE -->
 
-        <article class="project-card reveal">
+        <article class="project-card">
 
           <div class="project-image">
             <img
               src="./file_000000006aa88243b0ea64cadb4ba322.png"
-              alt="Online Store Project"
+              alt="Online Store"
               loading="lazy"
             >
             <span class="project-category">API PROJECT</span>
@@ -246,8 +252,8 @@
             </div>
 
             <p>
-              An online shopping application with product display,
-              API integration and shopping cart management.
+              An online shopping application with product
+              display, API integration and shopping cart management.
             </p>
 
             <div class="project-tech">
@@ -261,9 +267,10 @@
                  target="_blank" rel="noopener noreferrer">
                 Live Demo ↗
               </a>
-              <!-- Replace # with your repository URL -->
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Source Code ↗
+
+              <a href="https://github.com/ali-karami-web"
+                 target="_blank" rel="noopener noreferrer">
+                GitHub ↗
               </a>
             </div>
 
@@ -271,14 +278,14 @@
 
         </article>
 
-        <!-- PROJECT 2 -->
+        <!-- MOVIE WEBSITE -->
 
-        <article class="project-card reveal">
+        <article class="project-card">
 
           <div class="project-image">
             <img
               src="./file_0000000052cc8210ab93609e31d45f6f.png"
-              alt="Movie Website Project"
+              alt="Movie Website"
               loading="lazy"
             >
             <span class="project-category">API PROJECT</span>
@@ -307,9 +314,10 @@
                  target="_blank" rel="noopener noreferrer">
                 Live Demo ↗
               </a>
-              <!-- Replace # with your repository URL -->
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Source Code ↗
+
+              <a href="https://github.com/ali-karami-web"
+                 target="_blank" rel="noopener noreferrer">
+                GitHub ↗
               </a>
             </div>
 
@@ -325,7 +333,7 @@
 
     <section class="section container" id="contact">
 
-      <div class="contact-card reveal">
+      <div class="contact-card">
 
         <span class="section-label">GET IN TOUCH</span>
 
@@ -337,8 +345,8 @@
           on meaningful projects.
         </p>
 
-        <!-- Replace with your real email -->
-        <a href="mailto:YOUR_EMAIL@example.com" class="btn btn-primary">
+        <a href="mailto:YOUR_EMAIL@example.com"
+           class="btn btn-primary">
           Send Me an Email ↗
         </a>
 
@@ -361,20 +369,20 @@
   <footer class="footer">
 
     <div class="container footer-content">
-      <a href="#" class="logo">Ali<span>.</span></a>
+
+      <a href="#home" class="logo">Ali<span>.</span></a>
 
       <p>Designed & Developed by Ali Karami</p>
 
       <a href="#home" class="back-top">Back to top ↑</a>
+
     </div>
 
     <div class="copyright">
-      © <span id="year"></span> Ali Karami. All rights reserved.
+      © 2026 Ali Karami. All rights reserved.
     </div>
 
   </footer>
-
-  <script src="script.js"></script>
 
 </body>
 </html>
